@@ -20,7 +20,7 @@ test("calls the onTaskFormSubmit callback prop when the form is submitted", () =
 
   fireEvent.submit(screen.queryByText(/Add task/));
 
-  expect(onTaskFormSubmit).toHaveBeenCalledWith(
+  expect(onTaskFormSubmit()).toHaveBeenCalledWith(
     expect.objectContaining({
       text: "Pass the tests",
       category: "Code",
